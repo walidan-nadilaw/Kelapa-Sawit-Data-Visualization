@@ -45,7 +45,7 @@ function PlotLuas() {
         const layout = {
             title : 'luas lahan kelapa sawit per provinsi'.toUpperCase(),
             xaxis : {title : 'PROVINSI'},
-            yaxis : {title : 'JUMLAH TON/HEKTAR'},
+            yaxis : {title : 'RIBU HEKTAR'},
             margin: {
                 l: 150,
                 r: 80,

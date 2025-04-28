@@ -49,7 +49,7 @@ function PlotProduksi() {
         const layout = {
             title : "produksi sawit per provinsi".toUpperCase(),
             xaxis : {title : "PROVINSI"},
-            yaxis : {title : "jumlah produksi sawit (ribu ton)".toUpperCase() },
+            yaxis : {title : "RIBU TON".toUpperCase() },
             margin: {
                 l: 150,
                 r: 80,
