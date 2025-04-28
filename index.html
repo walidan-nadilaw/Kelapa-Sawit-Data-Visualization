@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Data Produksi Kelapa Sawit di Indonesia</title> 
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+    </head>
+
+    <body>
+        <h1 style="margin-left: 50px;">Data Produksi, Luas Lahan, dan Produktifitas Kelapa Sawit di Indonesia</h1>
+        
+        <!-- Dropdown to select graph type -->
+        <label for="graph-select" style="margin-left: 50px;">Choose a graph to display:</label>
+        <select id="graph-select">
+            <option value="produksi">Produksi Sawit</option>
+            <option value="luas">Luas Sawit</option>
+            <option value="produksi & luas">Produksi & luas</option>
+            <option value="produktifitas">Produktifitas Sawit</option>
+        </select>
+
+        <!-- Div where the graph will be rendered -->
+        <div id="test" style="width:100%; height:500px"></div>
+
+        <!-- Link to your JS files -->
+        <script src="vis_luas.js"></script>
+        <script src="vis_produksi.js"></script>
+        <script src="vis_produktifitas.js"></script>
+        <script src="vis_produk_luas.js"></script>
+
+        <!-- Custom script to handle the dropdown selection and graph rendering -->
+        <script>
+            // Function to handle graph selection
+            function renderGraph() {
+                const selectedGraph = document.getElementById('graph-select').value;
+
+                // Clear any previous graph
+                Plotly.purge('test');
+
+                // Render the selected graph
+                if (selectedGraph === 'luas') {
+                    PlotLuas(); // Call PlotLuas from vis_luas.js
+                } else if (selectedGraph === 'produksi') {
+                    PlotProduksi(); // Call PlotProduksi from vis_produksi.js
+                } else if (selectedGraph === 'produktifitas') {
+                    PlotProduktifitas(); // Call PlotProduktifitas from vis_produktifitas.js
+                } else if (selectedGraph === 'produksi & luas') {
+                    PlotProduksiLuas();
+                }
+            }
+
+            // Event listener for dropdown change
+            document.getElementById('graph-select').addEventListener('change', renderGraph);
+
+            // Render the default graph (luas) when the page loads
+            window.onload = renderGraph;
+        </script>
+    </body>
+</html>
