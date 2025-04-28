@@ -51,10 +51,10 @@ function PlotProduksi() {
             xaxis : {title : "PROVINSI"},
             yaxis : {title : "jumlah produksi sawit (ribu ton)".toUpperCase() },
             margin: {
-                l: 150,  // left
-                r: 80,  // right
-                b: 150, // bottom (increase this to move x-axis up and give room for labels)
-                t: 80   // top
+                l: 150,
+                r: 80,
+                b: 150,
+                t: 80
             }
         };
 
