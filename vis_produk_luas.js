@@ -37,18 +37,18 @@ function PlotProduksiLuas() {
                 x : provinsi,
                 y : produksi,
                 type : 'bar',
+                name : 'produksi',
                 marker : {
-                    color : produksi,
-                    colorscale : 'Viridis'
+                    color : '#50C878'
                 }
             },
             {
                 x : provinsi,
                 y : luas_lahan,
                 type : 'bar',
+                name : 'luas lahan',
                 marker : {
-                    color : luas_lahan,
-                    colorscale : 'Cividis'
+                    color : '#0096FF'
                 }
             }
         ];
