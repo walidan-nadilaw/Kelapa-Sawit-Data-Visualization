@@ -38,6 +38,7 @@ function PlotProduksi() {
                 x : provinsi,
                 y : produksi,
                 type : 'bar',
+                name : 'produksi sawit',
                 marker : {
                     color : produksi,
                     colorscale : 'Viridis'

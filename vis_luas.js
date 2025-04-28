@@ -35,6 +35,7 @@ function PlotLuas() {
             x : provinsi,
             y : luas_lahan,
             type : 'bar',
+            name : 'luas lahan sawit',
             marker : {
                 color : luas_lahan,
                 colorscale : 'Viridis'
