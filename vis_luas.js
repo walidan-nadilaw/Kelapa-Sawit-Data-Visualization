@@ -45,7 +45,13 @@ function PlotLuas() {
         const layout = {
             title : 'luas lahan kelapa sawit per provinsi'.toUpperCase(),
             xaxis : {title : 'PROVINSI'},
-            yaxis : {title : 'JUMLAH TON/HEKTAR'}
+            yaxis : {title : 'JUMLAH TON/HEKTAR'},
+            margin: {
+                l: 150,  // left
+                r: 80,  // right
+                b: 150, // bottom (increase this to move x-axis up and give room for labels)
+                t: 80   // top
+            }
         }
 
         Plotly.newPlot('test', data, layout, {responsive: true});
