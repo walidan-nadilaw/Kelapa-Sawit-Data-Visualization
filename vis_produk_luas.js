@@ -37,7 +37,7 @@ function PlotProduksiLuas() {
                 x : provinsi,
                 y : produksi,
                 type : 'bar',
-                name : 'produksi',
+                name : 'ribu ton',
                 marker : {
                     color : '#50C878'
                 }
@@ -46,7 +46,7 @@ function PlotProduksiLuas() {
                 x : provinsi,
                 y : luas_lahan,
                 type : 'bar',
-                name : 'luas lahan',
+                name : 'ribu hektar',
                 marker : {
                     color : '#0096FF'
                 }
